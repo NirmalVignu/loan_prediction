@@ -7,3 +7,5 @@ The aim of the bank is to convert there liability customers into loan customers.
 
 To know about or to contact me, click on below link
 - [click here&#128279; ](https://nirmalvignu.pythonanywhere.com/)
+Connect with me in linkedin
+- [linkedin&#128279; ](https://www.linkedin.com/in/vsnv/)
