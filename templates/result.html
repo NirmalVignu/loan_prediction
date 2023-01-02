@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>
+        Loan Prediction Result
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css' )}}">
+    <script src="{{ url_for('static',filename='main.js') }}"></script>
+</head>
+
+<body style="text-align: center;">
+    <h2 style="text-align: center;" >Loan Prediction Result</h2>
+
+    <div id="myDiv"><h3>Waiting for  your Result</h3> <br><br><img id="myImage" src="http://i.imgur.com/KUJoe.gif"></div><br>
+
+    <script type="text/javascript">
+        setTimeout(function () {
+            document.getElementById("myDiv").style.display = "none";
+        }, 5000); 
+         // 5 seconds
+         
+    </script>
+    <div id='prova' style='display:none'>
+        <h3 class="display-4">Your result is here</h3>
+        {{data2}}
+        {% if data %}
+        {{data}}
+
+        <h4 class="display-4">The person may take Loan you can contact him</h4>
+        {% else %}
+        <h4 class="display-4">The person will not take loan it's waste of time to contact him</h4>
+        {% endif %}
+        <a class="btn btn-primary" href="{{ url_for('index') }}">Go back</a>
+       
+    
+    
+    </div>
+
+    <script>
+        window.onload = function () {
+            setTimeout(appeardiv,5000);
+        }
+        function appeardiv() {
+            document.getElementById('prova').style.display= "block";
+        }
+    </script>
+    
+
+</body>
+
+</html>
