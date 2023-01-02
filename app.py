@@ -16,6 +16,29 @@ def index():
 
 
 def feature_engineering(data):
+    mortgage=data.get('mortgage')
+    if mortgage >= 0 and mortgage <= 100:
+        data['mortgage'] =0
+    elif mortgage > 100 and mortgage <= 200:
+        data['mortgage'] =1
+    elif mortgage > 200 and mortgage <= 300:
+        data['mortgage'] =2
+    elif mortgage > 300 and mortgage <= 400:
+        data['mortgage'] =3
+    elif mortgage > 400 and mortgage <= 500:
+        data['mortgage'] =4
+    elif mortgage > 500 and mortgage <= 600:
+        data['mortgage'] =5
+    elif mortgage > 600 and mortgage <= 700:
+        data['mortgage'] =6
+    elif mortgage > 700 and mortgage <= 800:
+        data['mortgage'] =7
+    elif mortgage > 800 and mortgage <= 900:
+        data['mortgage'] =8
+    elif mortgage > 900 and mortgage <= 1000:
+        data['mortgage'] =9
+    else:
+        data['mortgage'] =10
     with open('powertransformer.pkl', 'rb') as f1:
         pt=pkl.load(f1)
         data['income']=pt.transform([[data['income']]])
